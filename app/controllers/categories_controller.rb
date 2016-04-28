@@ -1,10 +1,10 @@
 class CategoriesController < ApplicationController
-  def index
-    @categories = Category.all
+ def index
+   @categories = Category.all
 
-    respond_tp do |f|
+      respond_to do |f|
       f.html
-      f.json {render json: {categories: @categories}}
+      f.json { render json: { categories: @categories } }
     end
   end
 end
